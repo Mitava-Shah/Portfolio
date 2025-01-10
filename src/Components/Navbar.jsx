@@ -16,12 +16,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-gray-900">
       <div className="  px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-pink-500 flex items-center">
           <Code className="mr-2 text-pink-400" />
-          <span>Mitava Shah</span>
+          <span>Mitva Shah</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -30,7 +30,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-pink/80 hover:text-white transition-colors"
+              className="text-white hover:text-pink-500 transition-colors"
             >
               {link.name}
             </a>

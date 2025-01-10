@@ -9,8 +9,8 @@ const TechSkill = ({ icon: Icon, name, description }) => (
       <div className="absolute w-full h-full bg-pink-600/80 rounded-2xl transition-transform duration-700 transform [transform-style:preserve-3d] group-hover:rotate-y-180 shadow-xl shadow-pink-500/40 hover:shadow-pink-500/60">
         {/* Front Side */}
         <div className="absolute w-full h-full rounded-2xl backface-hidden flex flex-col items-center justify-center text-center p-6 shadow-inner shadow-pink-400/40 group-hover:opacity-0 transition-opacity duration-500 bg-black">
-          <div className="w-36 h-36 rounded-full border-4 border-pink-300/50 flex items-center justify-center mb-4 transform transition-transform duration-300 group-hover:scale-90 shadow-lg shadow-pink-500/50 bg-pink-800/50 backdrop-blur-sm">
-            <Icon className="w-20 h-20 text-pink-100 drop-shadow-md" />
+          <div className="w-32 h-32 rounded-full border-4 border-pink-300/50 flex items-center justify-center mb-4 transform transition-transform duration-300 group-hover:scale-90 shadow-lg shadow-pink-500/50 bg-pink-800/50 backdrop-blur-sm">
+            <Icon className="w-14 h-14 text-pink-100 drop-shadow-md" />
           </div>
           <h3 className="text-2xl font-bold text-pink-100 drop-shadow-lg">
             {name}
@@ -19,7 +19,7 @@ const TechSkill = ({ icon: Icon, name, description }) => (
         
         {/* Back Side */}
         <div className="absolute w-full h-full rounded-2xl backface-hidden rotate-y-180 flex items-center justify-center p-6 text-center shadow-inner shadow-pink-400/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black backdrop-blur-sm">
-          <p className="text-pink-100 text-base leading-relaxed drop-shadow-md">
+          <p className="text-pink-100 text-base leading-relaxed drop-shadow-md cursor-default">
             {description}
           </p>
         </div>
@@ -43,7 +43,9 @@ const Skills = () => {
   ];
 
   return (
+    
     <div className="bg-gradient-to-b from-slate-900 to-black py-16 px-4 min-h-screen">
+      
       <div className=" mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-semibold mb-6 animate-pulse">

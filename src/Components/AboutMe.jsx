@@ -85,6 +85,20 @@ const AboutMe = () => {
     ];
 
     return (
+        <div className="relative bg-black">
+        {/* White SVG Wave */}
+        <svg
+            className="absolute top-[-6rem] left-0 w-full h-24 rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+        >
+            <path
+                fill="#000000"
+                fillOpacity="1"
+                d="M0,128L48,133.3C96,139,192,149,288,149.3C384,149,480,139,576,117.3C672,96,768,64,864,69.3C960,75,1056,117,1152,138.7C1248,160,1344,160,1392,160L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            ></path>
+        </svg>
         <div className="relative bg-black min-h-screen">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-black" />
             <div className="relative py-20 px-4">
@@ -94,7 +108,7 @@ const AboutMe = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl mb-16 text-center font-bold"
                     >
-                        <span className="bg-gradient-to-r from-white via-pink-400 to-blue-500 bg-clip-text text-transparent">
+                        <span className="text-white text-semibold">
                             Professional Journey
                         </span>
                     </motion.h2>
@@ -105,6 +119,7 @@ const AboutMe = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

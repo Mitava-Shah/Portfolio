@@ -39,9 +39,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-black pt-20 pb-6 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-black to-gray-800 pt-20 pb-6 overflow-hidden">
       {/* Decorative Wave SVG */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden">
+      {/* <div className="absolute top-0 left-0 w-full overflow-hidden">
         <svg
           className="relative block w-full h-[60px]"
           xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const Footer = () => {
             className="fill-gray-900"
           />
         </svg>
-      </div>
+      </div> */}
 
       <div className="max-w-6xl mx-auto px-4">
         {/* Main Footer Content */}
@@ -122,7 +122,7 @@ const Footer = () => {
           <p className="text-gray-400 flex items-center justify-center gap-2">
             Made with 
             <FaHeart className="text-pink-500 animate-pulse" /> 
-            by Your Name © {currentYear}
+            by Mitva Shah © {currentYear}
           </p>
           <p className="text-gray-500 mt-2 text-sm">
             All rights reserved
