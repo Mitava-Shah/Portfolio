@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white">
       <div className="  px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-pink-500 flex items-center">
@@ -71,7 +71,7 @@ const Navbar = () => {
             ))}
             <a 
               href="#contact"
-              className="block w-full text-center px-4 py-2 bg-pink-600 text-white rounded-full hover:bg-pink-700"
+              className="block w-full text-center px-4 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-800"
             >
               Hire Me
             </a>
