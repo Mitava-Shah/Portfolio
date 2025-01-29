@@ -1,7 +1,14 @@
 import React from 'react';
 import { Download, Layers, Server, Database, Share2 } from 'lucide-react';
+import img from "../assets/profileimg.png"
+import { useDispatch } from 'react-redux';
+import { scrollToSection } from '../Redux/ScrollSlice';
+
+
 
 const HeroSection = () => {
+  const dispatch = useDispatch();
+
   const TechSkillBadge = ({ icon: Icon, label }) => (
     <div className="flex items-center bg-white/10 px-3 py-1 rounded-full space-x-2 text-white">
       <Icon size={16} className="text-pink-900" />
@@ -10,20 +17,19 @@ const HeroSection = () => {
   );
 
   return (
-    <div className="relative px-4 flex items-center justify-center min-h-screen pt-20 bg-gradient-to-tl via-pink-500 from-pink-900 to-white">
-      <div className="text-center relative z-10">
-        <div className="relative flex flex-row-reverse justify-between items-center">
+    <div className="md:px-4 md:flex md:items-center md:justify-center md:min-h-screen pt-20 bg-gradient-to-tl via-pink-500 from-pink-900 to-white">
+      <div className="text-center z-10">
+        <div className="flex md:flex-row-reverse flex-col  justify-between items-center">
           {/* Professional Photo Placeholder with Gradient Border */}
-          <div className="mx-auto w-1/2 h-48 rounded-full mb-6 
-            bg-gradient-to-br from-pink-900 to-black 
-            p-1 animate-pulse">
-            <div className="w-full h-full rounded-full bg-black"></div>
+          <div className=" w-1/2 mx-auto   rounded-full mb-6 p-1 ">
+            {/* <div className="w-full h-full rounded-full bg-black"></div> */}
+            <img src={img} alt="" className='w-full ' />
           </div>
-          <div className='text-left'>
+          <div className='md:text-left w-full'>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 
               bg-gradient-to-r from-white to-pink-400 
               bg-clip-text text-transparent">
-              Hi, I am Mitava Shah
+              Hi, I am Mitva Shah
             </h1>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 
               bg-gradient-to-r from-white to-pink-400 
@@ -35,7 +41,7 @@ const HeroSection = () => {
               Transforming complex ideas into elegant, scalable applications.
             </p>
             {/* Tech Skill Badges */}
-            <div className="flex  space-x-2 mb-8">
+            <div className="flex flex-wrap space-x-2 mb-8">
               <TechSkillBadge icon={Database} label="MongoDB" />
               <TechSkillBadge icon={Share2} label="Express" />
               <TechSkillBadge icon={Layers} label="React" />
@@ -55,8 +61,8 @@ const HeroSection = () => {
               >
                 <Download className="mr-2" /> Download Resume
               </a>
-              <a
-                href="#contact"
+              <button
+                onClick={() => dispatch(scrollToSection("contact"))}
                 className="flex items-center px-6 py-3 
                   border-2 border-white/20 
                   text-white rounded-full 
@@ -64,7 +70,7 @@ const HeroSection = () => {
                   transition-all transform hover:-translate-y-1"
               >
                 Contact Me
-              </a>
+              </button>
             </div>
           </div>
         </div>
